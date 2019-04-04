@@ -51,19 +51,19 @@ namespace AdvancedMartialArts.Traits
                         x.StatTypeToReplaceBastStatFor = StatType.SkillPersuasion;
                         x.NewBaseStatType = StatType.Intelligence;
                     }));
-                BlueprintFeature cleverWorldplayFeatureUMD = Helpers.CreateFeature("CleverWordplayUMD",
+                BlueprintFeature cleverWorldplayFeatureUseMagicDevice = Helpers.CreateFeature("CleverWordplayUseMagicDevice",
                     "Clever Wordplay (Use Magic device)",
                     "Your cunning and logic are more than a match for another’s confidence and poise.\nBenefit: Choose one Charisma - based skill.You attempt checks with that skill using your Intelligence modifier instead of your Charisma modifier.",
-                    Helpers.getGuid("CleverWordplayUMD"),
+                    Helpers.getGuid("CleverWordplayUseMagicDevice"),
                     null,
                     FeatureGroup.None,
                     Helpers.Create<ReplaceBaseStatForStatTypeLogic>(x =>
                     {
-                        x.StatTypeToReplaceBastStatFor = StatType.SkillPersuasion;
+                        x.StatTypeToReplaceBastStatFor = StatType.SkillUseMagicDevice;
                         x.NewBaseStatType = StatType.Intelligence;
                     }));
 
-                cleverWorldplayFeatureSelection.SetFeatures(new BlueprintFeature[]{cleverWorldplayFeaturePersuasion, cleverWorldplayFeatureUMD});
+                cleverWorldplayFeatureSelection.SetFeatures(new BlueprintFeature[] { cleverWorldplayFeaturePersuasion, cleverWorldplayFeatureUseMagicDevice });
 
                 socialTraits.SetFeatures(socialTraits.AllFeatures.AddToArray(cleverWorldplayFeatureSelection));
             }

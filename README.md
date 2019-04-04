@@ -1,4 +1,6 @@
-# AdvancedMartialArts
+﻿# AdvancedMartialArts
+
+Use this instead https://github.com/Redjordan/AdvancedMartialArts/tree/feature/compatibility_1.3
 
 Advanced Martial Arts
 
